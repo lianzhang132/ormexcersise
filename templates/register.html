@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+this is a register page <br>
+<form action="/registerdo" method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    姓名<input type="text" name="name">
+    <select name="roles_id" id="">
+        {% for info in infos %}
+        <option value="{{ info.role_id }}">{{ info.role_name }}</option>
+        {% endfor %}
+
+    </select>
+    <input type="submit" value="提交">
+
+</form>
+
+</body>
+</html>

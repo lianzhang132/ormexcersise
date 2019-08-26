@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>this is a role list page</h1>
+{% for info in infos %}
+    <div>
+    {{ info.role_name }}
+    <a href="/role_del/{{ info.role_id }}">删除</a>
+    </div>
+
+
+
+{% endfor %}
+
+
+</body>
+</html>
